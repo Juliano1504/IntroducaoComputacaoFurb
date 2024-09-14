@@ -23,12 +23,12 @@ public class Uni4Exe18 {
         System.out.println("Valor da prestação: ");
         double vp1 = Double.parseDouble(teclado.nextLine());
 
-        if (p1 <= v1) {
+        if (p1 <= v1 && p1 >= 1) {
             vp1 = vp1 - (vp1 * 0.10);
             System.out.println("O valor da prestação ficou em: R$ " + vp1);
-        } else if (p1 <= v1 + 5) {
+        } else if (p1 > v1 && p1 <= v1 + 5) {
             System.out.println("O valor da prestação ficou em: R$ " + vp1);
-        } else {
+        } else if (p1 > v1 + 5 && p1 <= 30){
             vp1 = vp1 + (p1 - v1) * (vp1 * 0.02) ;
             System.out.println("O valor da prestação ficou em: R$ " + vp1);
         }
