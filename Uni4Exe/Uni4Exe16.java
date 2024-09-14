@@ -21,15 +21,27 @@ public class Uni4Exe16 {
         System.out.println("Idade segunda mulher: ");
         int m2 = Integer.parseInt(teclado.nextLine());
 
-        int homemMaisVelho = Math.max(h1, h2);
-        int homemMaisNovo = Math.min(h1, h2);
+        int soma;
+        if (h1 > h2 && m1 < m2) {
+            soma = h1 + m1;
+        } else if (h1 > h2 && m2 < m1) {
+            soma = h1 + m2;
+        } else if (h2 > h1 && m1 < m2) {
+            soma = h2 + m1;
+        } else {
+            soma = h2 + m2;
+        }
 
-        int mulherMaisVelha = Math.max(m1, m2);
-        int mulherMaisNova = Math.min(m1, m2);
-
-        int soma = homemMaisVelho + mulherMaisNova;
-
-        int produto = homemMaisNovo * mulherMaisVelha;
+        int produto;
+        if (h1 < h2 && m1 > m2) {
+            produto = h1 * m1;
+        } else if (h1 < h2 && m2 > m1) {
+            produto = h1 * m2;
+        } else if (h2 < h1 && m1 > m2) {
+            produto = h2 * m1;
+        } else {
+            produto = h2 * m2;
+        }
 
         System.out.println("A soma deu: " + soma);
         System.out.println("O produto deu: " + produto);
